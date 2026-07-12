@@ -59,4 +59,4 @@ What's important is to note that at `[00:03]` you're notified that the meatloaf 
 
 When working with multiple threads, it is _not_ the event loop that is managing your threads.
 So, it is _not_ the event loop that determines when you're working on the thread with the avocado or when you're working on the main thread, where the event loop and the async program is.
-But the effect you get is that, while working on the avocado, you'll pause just for long enough to note that the meatloaf is ready after three minutes.
+But the effect you get is that, while working on the avocado, you'll pause just for long enough to note that the meatloaf is ready at about the right time.

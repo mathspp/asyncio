@@ -347,7 +347,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -363,6 +365,18 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5">Exercise 5</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -374,6 +388,61 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="exercises">
 <h1>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
+<p>In this section you’re going to solve a couple of coding exercises that require you to prep lunch with tasks that you need to run in separate threads.
+For some of the final exercises, you’ll also need to write your own asynchronous functions.</p>
+<section id="exercise-1">
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Link to this heading">#</a></h2>
+<p>Delete the file <code class="docutils literal notranslate"><span class="pre">avocado.py</span></code> and recreate it from scratch.
+That is, prepare a lunch with:</p>
+<ul class="simple">
+<li><p>meatloaf that you must microwave</p></li>
+<li><p>pasta that you must cook</p></li>
+<li><p>avocado that you must peel and slice</p></li>
+</ul>
+<p>When you’re done, the code should run and lunch should be ready in 10.</p>
+</section>
+<section id="exercise-2">
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Link to this heading">#</a></h2>
+<p>Prepare a lunch with:</p>
+<ul class="simple">
+<li><p>roasted chicken (<code class="docutils literal notranslate"><span class="pre">RoastedChicken</span></code>) that you must microwave</p></li>
+<li><p>rice (<code class="docutils literal notranslate"><span class="pre">Rice</span></code>) that you must cook</p></li>
+<li><p>tomato (<code class="docutils literal notranslate"><span class="pre">Tomato</span></code>) that you must peel and slice</p></li>
+<li><p>onions (<code class="docutils literal notranslate"><span class="pre">Onion</span></code>) that you must peel and slice</p></li>
+</ul>
+<p>When you’re done, the code should run and lunch should be ready in 10.</p>
+</section>
+<section id="exercise-3">
+<h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Link to this heading">#</a></h2>
+<p>Prepare a lunch with:</p>
+<ul class="simple">
+<li><p>turkey (<code class="docutils literal notranslate"><span class="pre">Turkey</span></code>) that you must microwave</p></li>
+<li><p>rice (<code class="docutils literal notranslate"><span class="pre">Rice</span></code>) that you must cook</p></li>
+<li><p>couscous (<code class="docutils literal notranslate"><span class="pre">Couscous</span></code>) that you must cook</p></li>
+<li><p>onions (<code class="docutils literal notranslate"><span class="pre">Onion</span></code>) that you must peel and slice</p></li>
+</ul>
+<p>When you’re done, the code should run and lunch should be ready in 10.</p>
+</section>
+<section id="exercise-4">
+<h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Link to this heading">#</a></h2>
+<p>Prepare a lunch with:</p>
+<ul class="simple">
+<li><p>meatloaf that you must microwave</p></li>
+<li><p>pasta that you must cook</p></li>
+<li><p>carrots (<code class="docutils literal notranslate"><span class="pre">Carrots</span></code>) that you must cook <em>after</em> peeling and slicing</p></li>
+</ul>
+<p>When you’re done, the code should run and lunch should be ready in 10.</p>
+</section>
+<section id="exercise-5">
+<h2>Exercise 5<a class="headerlink" href="#exercise-5" title="Link to this heading">#</a></h2>
+<p>Prepare a lunch with:</p>
+<ul class="simple">
+<li><p>turkey (<code class="docutils literal notranslate"><span class="pre">Turkey</span></code>) that you must microwave</p></li>
+<li><p>asparagus (<code class="docutils literal notranslate"><span class="pre">Asparagus</span></code>) that you must cook <em>after</em> peeling and slicing</p></li>
+<li><p>green beans (<code class="docutils literal notranslate"><span class="pre">GreenBeans</span></code>) that you must cook <em>after</em> peeing and slicing</p></li>
+</ul>
+<p>When you’re done, the code should run and lunch should be ready in 9.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -421,6 +490,27 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3">Exercise 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-4">Exercise 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-5">Exercise 5</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

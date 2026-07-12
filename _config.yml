@@ -1,0 +1,33 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Cooking with asyncio
+author: Rodrigo Girão Serrão
+# logo: imgs/decs.webp
+only_build_toc_files: true
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: asyncio.tex
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
+  path_to_book: docs  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  # favicon: "imgs/favicon.png"
+  baseurl: "https://asyncio.mathspp.com/"
+  use_issues_button: true
+  use_repository_button: true
+
+sphinx:
+  config:
+    language: en
+    exclude_patterns:
+      - ".venv/**"
+      - "_build/**"

@@ -1,0 +1,20 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Fundamentals
+    chapters:
+    - file: prerequisites/index
+    - file: asynchronous-code/00.index
+      sections:
+      - file: asynchronous-code/01.preparing-lunch
+      - file: asynchronous-code/02.faster-lunch-prep
+      - file: asynchronous-code/03.managing-tasks
+      - file: asynchronous-code/04.the-keywords-async-and-await
+      - file: asynchronous-code/05.running-multiple-tasks
+      - file: asynchronous-code/06.exercises
+      - file: asynchronous-code/07.cpu-bound-tasks
+      - file: asynchronous-code/08.threads
+      - file: asynchronous-code/09.exercises

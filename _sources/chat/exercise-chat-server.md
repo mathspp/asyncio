@@ -35,7 +35,7 @@ class Server:
         to the other connections as they come in.
         """
 
-    async def run():
+    async def run(self):
         """Creates and runs the `asyncio` server.
 
         Initialises an `asyncio` server with the attributes passed earlier

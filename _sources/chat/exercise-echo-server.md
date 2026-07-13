@@ -21,7 +21,7 @@ class Server:
         and sends it back to the writer.
         """
 
-    async def run():
+    async def run(self):
         """Creates and runs the `asyncio` server.
 
         Initialises an `asyncio` server with the attributes passed earlier

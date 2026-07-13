@@ -47,6 +47,6 @@ When you're done, the code should run and lunch should be ready in 10.
 Prepare a lunch with:
  - turkey (`Turkey`) that you must microwave
  - asparagus (`Asparagus`) that you must cook _after_ peeling and slicing
- - green beans (`GreenBeans`) that you must cook _after_ peeing and slicing
+ - green beans (`GreenBeans`) that you must cook _after_ peeling and slicing
 
 When you're done, the code should run and lunch should be ready in 9.

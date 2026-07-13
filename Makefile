@@ -6,3 +6,6 @@ pdf:
 
 html:
 	uv run jb build --all -W .
+
+publish: html
+	ghp-import -npf _build/html -c asyncio.mathspp.com

@@ -3,7 +3,7 @@
 
 title: Cooking with asyncio
 author: Rodrigo Girão Serrão
-# logo: imgs/decs.webp
+logo: _static/sq_asyncio.png
 only_build_toc_files: true
 
 # Define the name of the latex output file for PDF builds

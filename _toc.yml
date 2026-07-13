@@ -7,14 +7,31 @@ parts:
   - caption: Fundamentals
     chapters:
     - file: prerequisites/index
-    - file: asynchronous-code/00.index
+    - file: asynchronous-code/index
       sections:
-      - file: asynchronous-code/01.preparing-lunch
-      - file: asynchronous-code/02.faster-lunch-prep
-      - file: asynchronous-code/03.managing-tasks
-      - file: asynchronous-code/04.the-keywords-async-and-await
-      - file: asynchronous-code/05.running-multiple-tasks
-      - file: asynchronous-code/06.exercises
-      - file: asynchronous-code/07.cpu-bound-tasks
-      - file: asynchronous-code/08.threads
-      - file: asynchronous-code/09.exercises
+      - file: asynchronous-code/preparing-lunch
+      - file: asynchronous-code/faster-lunch-prep
+      - file: asynchronous-code/managing-tasks
+      - file: asynchronous-code/the-keywords-async-and-await
+      - file: asynchronous-code/running-multiple-tasks
+      - file: asynchronous-code/exercises
+      - file: asynchronous-code/cpu-bound-tasks
+      - file: asynchronous-code/threads
+      - file: asynchronous-code/exercises-with-threads
+  - caption: Creating a chat application
+    chapters:
+    - file: chat/async-repl
+    - file: chat/index
+      sections:
+      - file: chat/ipc
+      - file: chat/using-the-streams
+      - file: chat/exercise-echo-server
+      - file: chat/exercise-chat-client
+      - file: chat/exercise-chat-server
+  - caption: Writing an efficient web crawler
+    chapters:
+    - file: crawler/index
+  - caption: Prologue
+    chapters:
+    - file: prologue/feedback
+    - file: prologue/ai-statement

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Managing tasks &#8212; Cooking with asyncio</title>
+    <title>Faster lunch prep &#8212; Cooking with asyncio</title>
   
   
   
@@ -61,12 +61,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'asynchronous-code/03.managing-tasks';</script>
-    <link rel="canonical" href="https://asyncio.mathspp.com/asynchronous-code/03.managing-tasks.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'asynchronous-code/faster-lunch-prep';</script>
+    <link rel="canonical" href="https://asyncio.mathspp.com/asynchronous-code/faster-lunch-prep.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The keywords async and await" href="04.the-keywords-async-and-await.html" />
-    <link rel="prev" title="Faster lunch prep" href="02.faster-lunch-prep.html" />
+    <link rel="next" title="Managing tasks" href="managing-tasks.html" />
+    <link rel="prev" title="Preparing lunch" href="preparing-lunch.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -173,18 +173,39 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../prerequisites/index.html">Prerequisites</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="00.index.html">Asynchronous code</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="01.preparing-lunch.html">Preparing lunch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02.faster-lunch-prep.html">Faster lunch prep</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Managing tasks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04.the-keywords-async-and-await.html">The keywords <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="05.running-multiple-tasks.html">Running multiple tasks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06.exercises.html">Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="07.cpu-bound-tasks.html">CPU-bound tasks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="08.threads.html">Threads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="09.exercises.html">Exercises</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Asynchronous code</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="preparing-lunch.html">Preparing lunch</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Faster lunch prep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managing-tasks.html">Managing tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the-keywords-async-and-await.html">The keywords <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="running-multiple-tasks.html">Running multiple tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cpu-bound-tasks.html">CPU-bound tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="threads.html">Threads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercises-with-threads.html">Exercises with threads</a></li>
 </ul>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating a chat application</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chat/async-repl.html">Python async REPL</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chat/index.html">Chat application</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chat/ipc.html">Inter-process communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chat/using-the-streams.html">Using the streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chat/exercise-echo-server.html">Exercise: echo server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chat/exercise-chat-client.html">Exercise: chat client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chat/exercise-chat-server.html">Exercise: chat server</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Writing an efficient web crawler</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../crawler/index.html">Crawler</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Prologue</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../prologue/feedback.html">Feedback</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prologue/ai-statement.html">AI statement</a></li>
 </ul>
 
     </div>
@@ -261,7 +282,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fasynchronous-code/03.managing-tasks.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fasynchronous-code/faster-lunch-prep.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +312,7 @@
       
       
       
-      <li><a href="../_sources/asynchronous-code/03.managing-tasks.md" target="_blank"
+      <li><a href="../_sources/asynchronous-code/faster-lunch-prep.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,7 +386,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Managing tasks</h1>
+    <h1>Faster lunch prep</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -379,40 +400,24 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="managing-tasks">
-<h1>Managing tasks<a class="headerlink" href="#managing-tasks" title="Link to this heading">#</a></h1>
-<p>When you call a function, the whole function runs from top to bottom.
-It’s only after the function returns that you can do something else.
-But this model of execution — the <strong>synchronous model of execution</strong> —, won’t cut it.
-This is why it took you 13 minutes to prepare your lunch.</p>
-<p>To be able to interleave your lunch prep tasks, they need to be defined differently.
-Microwaving the meatloaf and cooking the pasta can’t be regular functions.
-They must be a different type of object that allows you to <em>switch</em> to a different task during certain key moments.</p>
-<p>Asynchronous code is single-threaded, so the task switching isn’t obtained by having multiple threads working on multiple tasks.
-So, how does that work?</p>
-<p>Imagine you’re preparing your lunch with the help of a chef.
-You’re doing all the work, but none of the thinking.
-You only do what the chef tells you to do.</p>
-<p>When you get to the kitchen, this is what happens:</p>
-<ol class="arabic simple">
-<li><p>you tell the chef you want to prepare some meatloaf and some pasta</p></li>
-<li><p>the chef nods and tells you to put the meatloaf in the microwave</p></li>
-<li><p>when you do, you know you’ll be left waiting, so you ask the chef if there’s anything else you can do in the meantime</p></li>
-<li><p>the chef tells you to start cooking the pasta</p></li>
-<li><p>when you do, you know you’ll be left waiting, so you ask the chef if there’s anything else you can do in the meantime</p></li>
-<li><p>the chef tells you there’s nothing to do and so you wait, twiddling your thumbs</p></li>
-<li><p>when the microwave dings, the chef tells you to go grab the meatloaf</p></li>
-<li><p>after you do, you ask the chef if there’s anything else you can do in the meantime</p></li>
-<li><p>the chef tells you there’s nothing to do and so you wait, twiddling your thumbs</p></li>
-<li><p>when the pasta is ready, the chef tells you to go grab the pasta</p></li>
-<li><p>your lunch is ready to eat</p></li>
-</ol>
-<p>The chef is the one <em>managing</em> the tasks you’re working on.
-In the context of asynchronous code, the chef is called an <strong>event loop</strong>:
-the loop that runs your tasks and switches between them when appropriate.</p>
-<p>The standard library comes with the module <code class="docutils literal notranslate"><span class="pre">asyncio</span></code>, a module that provides a way to run an <strong>event loop</strong>.
-To run some tasks in an event loop, you can use the aptly named function <code class="docutils literal notranslate"><span class="pre">run</span></code> from the module <code class="docutils literal notranslate"><span class="pre">asyncio</span></code>.
-But what do you pass to that function?</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="faster-lunch-prep">
+<h1>Faster lunch prep<a class="headerlink" href="#faster-lunch-prep" title="Link to this heading">#</a></h1>
+<p>In the synchronous version of your lunch prep, you can represent the whole endeavour as the following diagram:</p>
+<p><img alt="An arrow represents time and two non-overlapping rectangles represent the 3m and the 10m it takes to microwave the meatloaf and cook the pasta, respectively." src="../_images/sync_lunch.png" /></p>
+<p>The two rectangles represent the tasks of microwaving the meatloaf and cooking the pasta, but they’re hollow because you’re not really busy during those times.
+The microwave is occupied, and the pasta is in the pot, but you’re free to go and do something else.</p>
+<p>So, instead of waiting for the meatloaf to be ready, you can start cooking the pasta while you’re waiting for the meatloaf, effectively creating an overlap in the waiting time of the two tasks:</p>
+<p><img alt="An arrow represents time and two rectangles that are left-aligned represent the 3m and the 10m it takes to microwave the meatloaf and cook the pasta, respectively." src="../_images/async_lunch.png" /></p>
+<p>You can start microwaving the meatloaf and cooking the pasta at the same time so that the time waiting for the meatloaf <em>overlaps</em> with the time waiting for the pasta.
+That’s how you can speed up the process as a whole, even though you can’t speed up any of the individual tasks.<a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<p>The question now becomes “What’s the code equivalent of managing my time better?”</p>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Strictly speaking, you <em>can’t</em> put the meatloaf in the microwave and the pasta in the pot at the exact same time. And things also don’t happen at <em>the exact same time</em> in code. But the time spent waiting is so much larger than the time spent starting the tasks that you can pretend they’re starting at the same time.</p>
+</aside>
+</aside>
 </section>
 
     <script type="text/x-thebe-config">
@@ -446,20 +451,20 @@ But what do you pass to that function?</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="02.faster-lunch-prep.html"
+       href="preparing-lunch.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Faster lunch prep</p>
+        <p class="prev-next-title">Preparing lunch</p>
       </div>
     </a>
     <a class="right-next"
-       href="04.the-keywords-async-and-await.html"
+       href="managing-tasks.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The keywords <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code></p>
+        <p class="prev-next-title">Managing tasks</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Asynchronous code &#8212; Cooking with asyncio</title>
+    <title>Using the streams &#8212; Cooking with asyncio</title>
   
   
   
@@ -61,12 +61,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'asynchronous-code/index';</script>
-    <link rel="canonical" href="https://asyncio.mathspp.com/asynchronous-code/index.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chat/using-the-streams';</script>
+    <link rel="canonical" href="https://asyncio.mathspp.com/chat/using-the-streams.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Preparing lunch" href="preparing-lunch.html" />
-    <link rel="prev" title="Prerequisites" href="../prerequisites/index.html" />
+    <link rel="next" title="Exercise: echo server" href="exercise-echo-server.html" />
+    <link rel="prev" title="Inter-process communication" href="ipc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -171,30 +171,30 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../prerequisites/index.html">Prerequisites</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Asynchronous code</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="preparing-lunch.html">Preparing lunch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="faster-lunch-prep.html">Faster lunch prep</a></li>
-<li class="toctree-l2"><a class="reference internal" href="managing-tasks.html">Managing tasks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="the-keywords-async-and-await.html">The keywords <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="running-multiple-tasks.html">Running multiple tasks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises.html">Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cpu-bound-tasks.html">CPU-bound tasks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="threads.html">Threads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="exercises-with-threads.html">Exercises with threads</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../asynchronous-code/index.html">Asynchronous code</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/preparing-lunch.html">Preparing lunch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/faster-lunch-prep.html">Faster lunch prep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/managing-tasks.html">Managing tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/the-keywords-async-and-await.html">The keywords <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/running-multiple-tasks.html">Running multiple tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/cpu-bound-tasks.html">CPU-bound tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/threads.html">Threads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/exercises-with-threads.html">Exercises with threads</a></li>
 </ul>
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating a chat application</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../chat/async-repl.html">Python async REPL</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chat/index.html">Chat application</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chat/ipc.html">Inter-process communication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chat/using-the-streams.html">Using the streams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chat/exercise-echo-server.html">Exercise: echo server</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chat/exercise-chat-client.html">Exercise: chat client</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../chat/exercise-chat-server.html">Exercise: chat server</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="async-repl.html">Python async REPL</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Chat application</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ipc.html">Inter-process communication</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Using the streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise-echo-server.html">Exercise: echo server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise-chat-client.html">Exercise: chat client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise-chat-server.html">Exercise: chat server</a></li>
 </ul>
 </details></li>
 </ul>
@@ -282,7 +282,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fasynchronous-code/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchat/using-the-streams.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -312,7 +312,7 @@
       
       
       
-      <li><a href="../_sources/asynchronous-code/index.md" target="_blank"
+      <li><a href="../_sources/chat/using-the-streams.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -388,7 +388,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Asynchronous code</h1>
+    <h1>Using the streams</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -398,7 +398,9 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-messages">Writing messages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-messages">Reading messages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-echo-server">Creating an echo server</a></li>
 </ul>
             </nav>
         </div>
@@ -410,22 +412,76 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="asynchronous-code">
-<h1>Asynchronous code<a class="headerlink" href="#asynchronous-code" title="Link to this heading">#</a></h1>
-<p>This section will teach you how to write, read, and run <strong>asynchronous code</strong>.
-Asynchronous code requires you to think about your program flow in a <em>non-linear</em> way, which can prove to be quite challenging in production-scale applications.</p>
-<p>To make async code as simple as possible, and to <em>ease</em> you into the right way of thinking about asynchronous code, you’ll start by understanding what async code is through some cooking analogies.
-Then, you’ll write your first lines of async code making use of <code class="docutils literal notranslate"><span class="pre">kitchenkit</span></code>, a package developed specifically to help you learn how to write asynchronous code and to use <code class="docutils literal notranslate"><span class="pre">asyncio</span></code>.</p>
-<section id="learning-objectives">
-<h2>Learning objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
-<p>The learning objectives for this section are:</p>
-<ul class="simple">
-<li><p>understanding the differences between synchronous and asynchronous code</p></li>
-<li><p>knowing how to write simple asynchronous programs using <code class="docutils literal notranslate"><span class="pre">kitchenkit</span></code>, the module <code class="docutils literal notranslate"><span class="pre">asyncio</span></code>, and the keywords <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code></p></li>
-</ul>
-</section>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="using-the-streams">
+<h1>Using the streams<a class="headerlink" href="#using-the-streams" title="Link to this heading">#</a></h1>
+<p>To communicate between two processes you use the objects <code class="docutils literal notranslate"><span class="pre">StreamReader</span></code> and <code class="docutils literal notranslate"><span class="pre">StreamWriter</span></code> that you saw printed on the REPLs.</p>
+<section id="writing-messages">
+<h2>Writing messages<a class="headerlink" href="#writing-messages" title="Link to this heading">#</a></h2>
+<p>If you have an object of the type <code class="docutils literal notranslate"><span class="pre">StreamWriter</span></code>, you can send messages by using the method <code class="docutils literal notranslate"><span class="pre">write</span></code>.
+The method <code class="docutils literal notranslate"><span class="pre">write</span></code> expects bytes, not a string, and immediately after using it you should await the method <code class="docutils literal notranslate"><span class="pre">drain</span></code>.
+So, in practice, writing some data will look like this:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;Hello, world!</span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="n">stream</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+<span class="k">await</span> <span class="n">stream</span><span class="o">.</span><span class="n">drain</span><span class="p">()</span>
+</pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The method <code class="docutils literal notranslate"><span class="pre">drain</span></code> is a lower-level detail that has to do with buffering.
+At its core, you can say that the line <code class="docutils literal notranslate"><span class="pre">await</span> <span class="pre">stream.drain()</span></code> just makes sure you’ll be able to write to the stream again.</p>
+</div>
+</section>
+<section id="reading-messages">
+<h2>Reading messages<a class="headerlink" href="#reading-messages" title="Link to this heading">#</a></h2>
+<p>Objects of the type <code class="docutils literal notranslate"><span class="pre">StreamReader</span></code> have four different asynchronous methods that allow you to read data.
+To make life easier for you, you can stick to using the asynchronous method <code class="docutils literal notranslate"><span class="pre">readline</span></code>, which reads a full line from the stream.</p>
+</section>
+<section id="creating-an-echo-server">
+<h2>Creating an echo server<a class="headerlink" href="#creating-an-echo-server" title="Link to this heading">#</a></h2>
+<p>Now that you know about the relevant stream methods, you can create a simple echo server in the REPL.
+Close your two REPLs and open them again.</p>
+<p>In one, you’re going to define a connection callback that runs an infinite loop.
+The loop will try to read a line from the reader stream and immediately writes it back to the writer stream:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">connection_callback</span><span class="p">(</span><span class="n">reader</span><span class="p">,</span> <span class="n">writer</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connection made!&quot;</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Got </span><span class="si">{</span><span class="n">data</span><span class="w"> </span><span class="si">= }</span><span class="s2">. Sending back.&quot;</span><span class="p">)</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="k">await</span> <span class="n">writer</span><span class="o">.</span><span class="n">drain</span><span class="p">()</span>
+
+<span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">start_server</span><span class="p">(</span><span class="n">connection_callback</span><span class="p">,</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">7342</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Paste that code into one of the REPLs to make the server.</p>
+<p>In another, you can paste the following code:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+
+<span class="n">reader</span><span class="p">,</span> <span class="n">writer</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">open_connection</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">7342</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Once you do, you should immediately see the message <code class="docutils literal notranslate"><span class="pre">&quot;Connection</span> <span class="pre">made!&quot;</span></code> in the server REPL.</p>
+<p>Now, in the client REPL, where you just opened a connection, you can try sending a message:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">writer</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;Hello, world!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">await</span> <span class="n">writer</span><span class="o">.</span><span class="n">drain</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Make sure you’re sending <em>bytes</em> and that your message ends with a newline.</p>
+<p>Once you send a full line, the server should report that it received some data and that it’s sending it back.
+In the client REPL, you can read that data back:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="k">await</span> <span class="n">reader</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="go">b&#39;Hello, world!\n&#39;</span>
+</pre></div>
+</div>
+<p>You just managed to create a simple echo server, connect to it, and then send data to it and read from it.</p>
+<p>Believe it or not, you already possess all the knowledge and information required to create a chat app.
+It won’t be easy, but you already have all the required pieces.
+The next sections will provide some guidance to help you write the chat server and chat client that enable a multi-user chatroom.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -441,7 +497,7 @@ Then, you’ll write your first lines of async code making use of <code class="d
         },
         kernelOptions: {
             name: "python3",
-            path: "./asynchronous-code"
+            path: "./chat"
         },
         predefinedOutput: true
     }
@@ -459,20 +515,20 @@ Then, you’ll write your first lines of async code making use of <code class="d
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../prerequisites/index.html"
+       href="ipc.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Prerequisites</p>
+        <p class="prev-next-title">Inter-process communication</p>
       </div>
     </a>
     <a class="right-next"
-       href="preparing-lunch.html"
+       href="exercise-echo-server.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Preparing lunch</p>
+        <p class="prev-next-title">Exercise: echo server</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -494,7 +550,9 @@ Then, you’ll write your first lines of async code making use of <code class="d
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-messages">Writing messages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reading-messages">Reading messages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-an-echo-server">Creating an echo server</a></li>
 </ul>
   </nav></div>
 

@@ -11,5 +11,4 @@ Then, you'll write your first lines of async code making use of `kitchenkit`, a 
 The learning objectives for this section are:
 
  - understanding the differences between synchronous and asynchronous code
- - being able to identify tasks that could benefit from asynchronous code execution
  - knowing how to write simple asynchronous programs using `kitchenkit`, the module `asyncio`, and the keywords `async` and `await`

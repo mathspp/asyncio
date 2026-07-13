@@ -1,0 +1,52 @@
+# Exercises with threads
+
+In this section you're going to solve a couple of coding exercises that require you to prep lunch with tasks that you need to run in separate threads.
+For some of the final exercises, you'll also need to write your own asynchronous functions.
+
+## Exercise 1
+
+Delete the file `avocado.py` and recreate it from scratch.
+That is, prepare a lunch with:
+ - meatloaf that you must microwave
+ - pasta that you must cook
+ - avocado that you must peel and slice
+
+When you're done, the code should run and lunch should be ready in 10.
+
+## Exercise 2
+
+Prepare a lunch with:
+ - roasted chicken (`RoastedChicken`) that you must microwave
+ - rice (`Rice`) that you must cook
+ - tomato (`Tomato`) that you must peel and slice
+ - onions (`Onion`) that you must peel and slice
+
+When you're done, the code should run and lunch should be ready in 10.
+
+## Exercise 3
+
+Prepare a lunch with:
+ - turkey (`Turkey`) that you must microwave
+ - rice (`Rice`) that you must cook
+ - couscous (`Couscous`) that you must cook
+ - onions (`Onion`) that you must peel and slice
+
+When you're done, the code should run and lunch should be ready in 10.
+
+## Exercise 4
+
+Prepare a lunch with:
+ - meatloaf that you must microwave
+ - pasta that you must cook
+ - carrots (`Carrots`) that you must cook _after_ peeling and slicing
+
+When you're done, the code should run and lunch should be ready in 10.
+
+## Exercise 5
+
+Prepare a lunch with:
+ - turkey (`Turkey`) that you must microwave
+ - asparagus (`Asparagus`) that you must cook _after_ peeling and slicing
+ - green beans (`GreenBeans`) that you must cook _after_ peeing and slicing
+
+When you're done, the code should run and lunch should be ready in 9.

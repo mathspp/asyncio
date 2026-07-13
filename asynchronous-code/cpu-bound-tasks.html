@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Asynchronous code &#8212; Cooking with asyncio</title>
+    <title>CPU-bound tasks &#8212; Cooking with asyncio</title>
   
   
   
@@ -61,12 +61,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'asynchronous-code/index';</script>
-    <link rel="canonical" href="https://asyncio.mathspp.com/asynchronous-code/index.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'asynchronous-code/cpu-bound-tasks';</script>
+    <link rel="canonical" href="https://asyncio.mathspp.com/asynchronous-code/cpu-bound-tasks.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Preparing lunch" href="preparing-lunch.html" />
-    <link rel="prev" title="Prerequisites" href="../prerequisites/index.html" />
+    <link rel="next" title="Threads" href="threads.html" />
+    <link rel="prev" title="Exercises" href="exercises.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -173,14 +173,14 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../prerequisites/index.html">Prerequisites</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Asynchronous code</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Asynchronous code</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="preparing-lunch.html">Preparing lunch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faster-lunch-prep.html">Faster lunch prep</a></li>
 <li class="toctree-l2"><a class="reference internal" href="managing-tasks.html">Managing tasks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="the-keywords-async-and-await.html">The keywords <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code></a></li>
 <li class="toctree-l2"><a class="reference internal" href="running-multiple-tasks.html">Running multiple tasks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercises.html">Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cpu-bound-tasks.html">CPU-bound tasks</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">CPU-bound tasks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="threads.html">Threads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="exercises-with-threads.html">Exercises with threads</a></li>
 </ul>
@@ -282,7 +282,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fasynchronous-code/index.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fasynchronous-code/cpu-bound-tasks.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -312,7 +312,7 @@
       
       
       
-      <li><a href="../_sources/asynchronous-code/index.md" target="_blank"
+      <li><a href="../_sources/asynchronous-code/cpu-bound-tasks.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -375,9 +375,7 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -388,19 +386,11 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Asynchronous code</h1>
+    <h1>CPU-bound tasks</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -410,22 +400,123 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="asynchronous-code">
-<h1>Asynchronous code<a class="headerlink" href="#asynchronous-code" title="Link to this heading">#</a></h1>
-<p>This section will teach you how to write, read, and run <strong>asynchronous code</strong>.
-Asynchronous code requires you to think about your program flow in a <em>non-linear</em> way, which can prove to be quite challenging in production-scale applications.</p>
-<p>To make async code as simple as possible, and to <em>ease</em> you into the right way of thinking about asynchronous code, you’ll start by understanding what async code is through some cooking analogies.
-Then, you’ll write your first lines of async code making use of <code class="docutils literal notranslate"><span class="pre">kitchenkit</span></code>, a package developed specifically to help you learn how to write asynchronous code and to use <code class="docutils literal notranslate"><span class="pre">asyncio</span></code>.</p>
-<section id="learning-objectives">
-<h2>Learning objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
-<p>The learning objectives for this section are:</p>
-<ul class="simple">
-<li><p>understanding the differences between synchronous and asynchronous code</p></li>
-<li><p>knowing how to write simple asynchronous programs using <code class="docutils literal notranslate"><span class="pre">kitchenkit</span></code>, the module <code class="docutils literal notranslate"><span class="pre">asyncio</span></code>, and the keywords <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code></p></li>
-</ul>
-</section>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="cpu-bound-tasks">
+<h1>CPU-bound tasks<a class="headerlink" href="#cpu-bound-tasks" title="Link to this heading">#</a></h1>
+<p>So far, you’ve been writing async code with <strong>I/O-bound</strong> tasks.
+A task is <strong>I/O-bound</strong> if the time it takes to complete depends mostly on waiting for something external, like the user providing input or a server responding to a request.
+In the cooking analogy, you’re waiting for the food items to be ready.</p>
+<p>Typical applications also contain <strong>CPU-bound</strong> tasks.
+A task is <strong>CPU-bound</strong> if the time it takes to complete depends mostly on your CPU doing work, like crunching some numbers or processing some data.
+In the cooking analogy, an example of a CPU-bound task could be peeling and slicing some food.</p>
+<p>Suppose that you want to add some avocado to your lunch.
+To prepare the avocado, you need to peel and slice it.
+While you’re peeling and slicing, you are <em>busy</em> working, your hands are occupied, and you can’t do anything else.
+Because you’re busy doing meaningful work, you won’t be able to switch tasks while you’re taking care of the avocado.</p>
+<p>The module <code class="docutils literal notranslate"><span class="pre">kitchenkit.prep</span></code> provides a synchronous function called <code class="docutils literal notranslate"><span class="pre">peel_and_slice</span></code>.
+(CPU-bound work is typically synchronous.)
+How can you modify your previous code to add avocado to your meal while keeping the lunch prep time as short as possible?</p>
+<p>Because the function <code class="docutils literal notranslate"><span class="pre">peel_and_slice</span></code> is synchronous, you can’t add it inside <code class="docutils literal notranslate"><span class="pre">asyncio.gather</span></code>.
+One possibility is to add it before <code class="docutils literal notranslate"><span class="pre">asyncio.gather</span></code>:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">kitchenkit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">kitchenkit.prep</span><span class="w"> </span><span class="kn">import</span> <span class="n">async_cook</span><span class="p">,</span> <span class="n">async_microwave</span><span class="p">,</span> <span class="n">peel_and_slice</span>
+
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">lunch_prep</span><span class="p">():</span>
+    <span class="n">put_on_apron</span><span class="p">()</span>
+    <span class="n">avocado</span> <span class="o">=</span> <span class="n">peel_and_slice</span><span class="p">(</span><span class="n">Avocado</span><span class="p">())</span>
+    <span class="n">food</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span>
+        <span class="n">async_microwave</span><span class="p">(</span><span class="n">Meatloaf</span><span class="p">()),</span>
+        <span class="n">async_cook</span><span class="p">(</span><span class="n">Pasta</span><span class="p">()),</span>
+    <span class="p">)</span>
+    <span class="n">serve_food</span><span class="p">(</span><span class="o">*</span><span class="n">food</span><span class="p">,</span> <span class="n">avocado</span><span class="p">)</span>
+</pre></div>
 </div>
+<p>If you modify the function <code class="docutils literal notranslate"><span class="pre">lunch_prep</span></code> to call <code class="docutils literal notranslate"><span class="pre">peel_and_slice</span></code> before <code class="docutils literal notranslate"><span class="pre">asyncio.gather</span></code>, running the code should now produce this output:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>(TODO) add output here, should take 14 minutes
+</pre></div>
+</div>
+<p>Lunch prep is now taking 14 minutes instead of 10 because you’re spending 4 minutes peeling and slicing the avocado before you let the event loop take care of the meatloaf and the pasta.
+Your task management looks like this:</p>
+<p><img alt="An arrow represents time and two rectangles that are left-aligned represent the 3m and the 10m it takes to microwave the meatloaf and cook the pasta, respectively. To their left, a completely filled rectangle takes 4m to represent the avocado." src="../_images/pre_avocado_async_lunch.png" /></p>
+<p>The red block on the left corresponds to working on the avocado, which is time during which you can’t do anything else.</p>
+<p>You could also try calling <code class="docutils literal notranslate"><span class="pre">peel_and_slice</span></code> <em>after</em> <code class="docutils literal notranslate"><span class="pre">asyncio.gather</span></code>, but that amounts to moving the red rectangle to the right end of the diagram.</p>
+<p>Ideally, you’d want the avocado rectangle to be inside the two other hollow rectangles:</p>
+<p><img alt="An arrow represents time and two rectangles that are left-aligned represent the 3m and the 10m it takes to microwave the meatloaf and cook the pasta, respectively. Also aligned, but completely filled, is a rectangle representing the 4m it takes to prepare the avocado." src="../_images/avocado_async_lunch.png" /></p>
+<p>To have the avocado task rectangle inside the other two task rectangles, you might be tempted to wrap <code class="docutils literal notranslate"><span class="pre">peel_and_slice</span></code> inside an asynchronous function:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">prep_avocado</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">peel_and_slice</span><span class="p">(</span><span class="n">Avocado</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Once the asynchronous function <code class="docutils literal notranslate"><span class="pre">prep_avocado</span></code> is defined, you can call it and schedule the resulting coroutine inside <code class="docutils literal notranslate"><span class="pre">asyncio.gather</span></code>, together with the coroutines for the meatloaf and the pasta:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">kitchenkit</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">kitchenkit.prep</span><span class="w"> </span><span class="kn">import</span> <span class="n">async_cook</span><span class="p">,</span> <span class="n">async_microwave</span><span class="p">,</span> <span class="n">peel_and_slice</span>
+
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">prep_avocado</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">peel_and_slice</span><span class="p">(</span><span class="n">Avocado</span><span class="p">())</span>
+
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">lunch_prep</span><span class="p">():</span>
+    <span class="n">put_on_apron</span><span class="p">()</span>
+    <span class="n">food</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span>
+        <span class="n">prep_avocado</span><span class="p">(),</span>
+        <span class="n">async_microwave</span><span class="p">(</span><span class="n">Meatloaf</span><span class="p">()),</span>
+        <span class="n">async_cook</span><span class="p">(</span><span class="n">Pasta</span><span class="p">()),</span>
+    <span class="p">)</span>
+    <span class="n">serve_food</span><span class="p">(</span><span class="o">*</span><span class="n">food</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">lunch_prep</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>If you save this code in <code class="docutils literal notranslate"><span class="pre">avocado.py</span></code> and run it, you’ll get the following output:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[00:00] INFO     Let&#39;s get cooking! 🧑‍🍳
+        INFO     Going to peel and slice the avocado.
+[00:04] INFO     The avocado is ready!
+        INFO     Going to microwave the meatloaf.
+        INFO     What can I do to save time..?
+        INFO     Going to cook the pasta.
+        INFO     What can I do to save time..?
+[00:07] INFO     The meatloaf is ready!
+[00:14] INFO     The pasta is ready!
+        INFO     Finished cooking in 14 minutes. ✨
+        INFO     Now serving: avocado, meatloaf, pasta
+</pre></div>
+</div>
+<p>But this code wasn’t right!
+Lunch is still taking 14 minutes to cook because you’re starting with the avocado and that’s blocking all the other work.</p>
+<p>As an attempt to fix this, you can move the coroutine <code class="docutils literal notranslate"><span class="pre">prep_avocado()</span></code> to the bottom of the call to <code class="docutils literal notranslate"><span class="pre">asyncio.gather</span></code>:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="n">food</span> <span class="o">=</span> <span class="k">await</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">gather</span><span class="p">(</span>
+    <span class="n">async_microwave</span><span class="p">(</span><span class="n">Meatloaf</span><span class="p">()),</span>
+    <span class="n">async_cook</span><span class="p">(</span><span class="n">Pasta</span><span class="p">()),</span>
+    <span class="n">prep_avocado</span><span class="p">(),</span>  <span class="c1"># &lt;--</span>
+<span class="p">)</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>And this might <em>look</em> like it fixes it…
+If you run this modified version, output looks like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[00:00] INFO     Let&#39;s get cooking! 🧑‍🍳
+        INFO     Going to microwave the meatloaf.
+        INFO     What can I do to save time..?
+        INFO     Going to cook the pasta.
+        INFO     What can I do to save time..?
+        INFO     Going to peel and slice the avocado.
+[00:04] INFO     The avocado is ready!
+        INFO     The meatloaf is ready!
+[00:10] INFO     The pasta is ready!
+        INFO     Finished cooking in 10 minutes. ✨
+        INFO     Now serving: meatloaf, pasta, avocado
+</pre></div>
+</div>
+<p>Note that you only became aware that the meatloaf was ready at minute 4, 1 minute <em>after</em> it was <em>actually</em> ready.
+That’s because taking care of the avocado is a CPU-bound task that is keeping you very busy, preventing you from checking the other items:</p>
+<p>The CPU-bound avocado task is <strong>blocking</strong>.
+While you’re on that red rectangle, you can’t do anything else.
+That’s why you only realise the meatloaf is ready 1 minute too late:</p>
+<p><img alt="" src="../_images/async_lunch_late_meatloaf.png" /></p>
+<p>When you have CPU-bound tasks, or blocking work, you can use a different mechanism to make sure the asynchronous part of the application remains responsive.
+That’s what you’ll learn about next.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -459,20 +550,20 @@ Then, you’ll write your first lines of async code making use of <code class="d
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../prerequisites/index.html"
+       href="exercises.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Prerequisites</p>
+        <p class="prev-next-title">Exercises</p>
       </div>
     </a>
     <a class="right-next"
-       href="preparing-lunch.html"
+       href="threads.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Preparing lunch</p>
+        <p class="prev-next-title">Threads</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -482,23 +573,6 @@ Then, you’ll write your first lines of async code making use of <code class="d
             </div>
             
             
-              
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item"><div
-    id="pst-page-navigation-heading-2"
-    class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning objectives</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

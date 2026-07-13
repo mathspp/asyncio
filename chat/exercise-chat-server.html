@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Managing tasks &#8212; Cooking with asyncio</title>
+    <title>Exercise: chat server &#8212; Cooking with asyncio</title>
   
   
   
@@ -61,12 +61,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'asynchronous-code/03.managing-tasks';</script>
-    <link rel="canonical" href="https://asyncio.mathspp.com/asynchronous-code/03.managing-tasks.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chat/exercise-chat-server';</script>
+    <link rel="canonical" href="https://asyncio.mathspp.com/chat/exercise-chat-server.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="The keywords async and await" href="04.the-keywords-async-and-await.html" />
-    <link rel="prev" title="Faster lunch prep" href="02.faster-lunch-prep.html" />
+    <link rel="next" title="Crawler" href="../crawler/index.html" />
+    <link rel="prev" title="Exercise: chat client" href="exercise-chat-client.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -171,20 +171,41 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../prerequisites/index.html">Prerequisites</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="00.index.html">Asynchronous code</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="01.preparing-lunch.html">Preparing lunch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02.faster-lunch-prep.html">Faster lunch prep</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Managing tasks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04.the-keywords-async-and-await.html">The keywords <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="05.running-multiple-tasks.html">Running multiple tasks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="06.exercises.html">Exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="07.cpu-bound-tasks.html">CPU-bound tasks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="08.threads.html">Threads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="09.exercises.html">Exercises</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../asynchronous-code/index.html">Asynchronous code</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/preparing-lunch.html">Preparing lunch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/faster-lunch-prep.html">Faster lunch prep</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/managing-tasks.html">Managing tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/the-keywords-async-and-await.html">The keywords <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/running-multiple-tasks.html">Running multiple tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/exercises.html">Exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/cpu-bound-tasks.html">CPU-bound tasks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/threads.html">Threads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asynchronous-code/exercises-with-threads.html">Exercises with threads</a></li>
 </ul>
 </details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Creating a chat application</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="async-repl.html">Python async REPL</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Chat application</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ipc.html">Inter-process communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using-the-streams.html">Using the streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise-echo-server.html">Exercise: echo server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exercise-chat-client.html">Exercise: chat client</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Exercise: chat server</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Writing an efficient web crawler</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../crawler/index.html">Crawler</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Prologue</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../prologue/feedback.html">Feedback</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../prologue/ai-statement.html">AI statement</a></li>
 </ul>
 
     </div>
@@ -261,7 +282,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fasynchronous-code/03.managing-tasks.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchat/exercise-chat-server.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +312,7 @@
       
       
       
-      <li><a href="../_sources/asynchronous-code/03.managing-tasks.md" target="_blank"
+      <li><a href="../_sources/chat/exercise-chat-server.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -365,7 +386,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Managing tasks</h1>
+    <h1>Exercise: chat server</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -379,40 +400,66 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="managing-tasks">
-<h1>Managing tasks<a class="headerlink" href="#managing-tasks" title="Link to this heading">#</a></h1>
-<p>When you call a function, the whole function runs from top to bottom.
-It’s only after the function returns that you can do something else.
-But this model of execution — the <strong>synchronous model of execution</strong> —, won’t cut it.
-This is why it took you 13 minutes to prepare your lunch.</p>
-<p>To be able to interleave your lunch prep tasks, they need to be defined differently.
-Microwaving the meatloaf and cooking the pasta can’t be regular functions.
-They must be a different type of object that allows you to <em>switch</em> to a different task during certain key moments.</p>
-<p>Asynchronous code is single-threaded, so the task switching isn’t obtained by having multiple threads working on multiple tasks.
-So, how does that work?</p>
-<p>Imagine you’re preparing your lunch with the help of a chef.
-You’re doing all the work, but none of the thinking.
-You only do what the chef tells you to do.</p>
-<p>When you get to the kitchen, this is what happens:</p>
-<ol class="arabic simple">
-<li><p>you tell the chef you want to prepare some meatloaf and some pasta</p></li>
-<li><p>the chef nods and tells you to put the meatloaf in the microwave</p></li>
-<li><p>when you do, you know you’ll be left waiting, so you ask the chef if there’s anything else you can do in the meantime</p></li>
-<li><p>the chef tells you to start cooking the pasta</p></li>
-<li><p>when you do, you know you’ll be left waiting, so you ask the chef if there’s anything else you can do in the meantime</p></li>
-<li><p>the chef tells you there’s nothing to do and so you wait, twiddling your thumbs</p></li>
-<li><p>when the microwave dings, the chef tells you to go grab the meatloaf</p></li>
-<li><p>after you do, you ask the chef if there’s anything else you can do in the meantime</p></li>
-<li><p>the chef tells you there’s nothing to do and so you wait, twiddling your thumbs</p></li>
-<li><p>when the pasta is ready, the chef tells you to go grab the pasta</p></li>
-<li><p>your lunch is ready to eat</p></li>
-</ol>
-<p>The chef is the one <em>managing</em> the tasks you’re working on.
-In the context of asynchronous code, the chef is called an <strong>event loop</strong>:
-the loop that runs your tasks and switches between them when appropriate.</p>
-<p>The standard library comes with the module <code class="docutils literal notranslate"><span class="pre">asyncio</span></code>, a module that provides a way to run an <strong>event loop</strong>.
-To run some tasks in an event loop, you can use the aptly named function <code class="docutils literal notranslate"><span class="pre">run</span></code> from the module <code class="docutils literal notranslate"><span class="pre">asyncio</span></code>.
-But what do you pass to that function?</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="exercise-chat-server">
+<h1>Exercise: chat server<a class="headerlink" href="#exercise-chat-server" title="Link to this heading">#</a></h1>
+<p>In this final exercise you’re going to modify your echo server so it’s actually a suitable server for your chat application.</p>
+<p>If you think about it, in a chatroom, the server is similar to an echo server.
+However, you don’t want to echo a message to the user that wrote it.
+Instead, you want to broadcast it to <em>everyone else</em>.
+For this to be possible, you need to make each connection callback aware of the other connections that are alive, which is why the server is a class in the first place.</p>
+<p>You’re going to modify the file <code class="docutils literal notranslate"><span class="pre">server.py</span></code> to follow this structure:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Server</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">):</span>
+        <span class="o">...</span>
+        <span class="c1"># Map usernames to writers.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">connections</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">broadcast</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sender</span><span class="p">,</span> <span class="n">content</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Sends a message to every connection except the original sender.</span>
+
+<span class="sd">        Traverses through all the available connections and writes the given</span>
+<span class="sd">        content to that connection, unless that&#39;s the original sender.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">connection_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">reader</span><span class="p">,</span> <span class="n">writer</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Implements a chatroom server.</span>
+
+<span class="sd">        When a new connection is established, immediately reads the username</span>
+<span class="sd">        sent from that new connection and saves it.</span>
+<span class="sd">        Then, starts an infinite loop to read messages and to broadcast them</span>
+<span class="sd">        to the other connections as they come in.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+    <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">():</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Creates and runs the `asyncio` server.</span>
+
+<span class="sd">        Initialises an `asyncio` server with the attributes passed earlier</span>
+<span class="sd">        and then uses the method `server_forever` to listen for connections.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="o">...</span>
+        <span class="k">await</span> <span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+
+
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="n">Server</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">7342</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">server</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Make sure to add plenty of prints in your code to help you understand what’s happening in your code.</p>
+<p>When you’re finished, you should be able to run your server, start 2 or 3 clients with different usernames, and then writing a message in one client should immediately show it in the server and in the other clients.</p>
+<div class="admonition-extra-challenge admonition">
+<p class="admonition-title">Extra challenge</p>
+<p>What happens if your server is running and you close the async REPL with the client?
+How can the server detect that a connection was closed by the client?
+And how can the server handle the disconnection gracefully?</p>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -428,7 +475,7 @@ But what do you pass to that function?</p>
         },
         kernelOptions: {
             name: "python3",
-            path: "./asynchronous-code"
+            path: "./chat"
         },
         predefinedOutput: true
     }
@@ -446,20 +493,20 @@ But what do you pass to that function?</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="02.faster-lunch-prep.html"
+       href="exercise-chat-client.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Faster lunch prep</p>
+        <p class="prev-next-title">Exercise: chat client</p>
       </div>
     </a>
     <a class="right-next"
-       href="04.the-keywords-async-and-await.html"
+       href="../crawler/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">The keywords <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code></p>
+        <p class="prev-next-title">Crawler</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
